@@ -1,0 +1,152 @@
+.header{
+    background-color: #fff;
+    box-shadow: 0 0 10px hsl(0deg 0% 0% / 10%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .container {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+.navbar .navbar-list {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .navbar-list a {
+    color: inherit;
+}
+
+.navbar .navbar-list a:hover {
+    color: #ff8f9c;
+}
+
+.search {
+    position: relative;
+}
+
+.search .search-field {
+    border: none;
+    outline: none;
+    padding: 4px 25px;
+    border-radius: 12px;
+    border: 1px solid #ededed;
+}
+
+.search .btn-search {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.search .btn-search:hover {
+    color: #ff8f9c;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions .toggle-search ,
+.actions .toggle-navbar {
+    display: none;
+}
+
+.actions .action:first-child ion-icon {
+    --ionicon-stroke-width: 30px;
+}
+
+.action {
+    font-size: 28px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.action .count {
+    position: absolute;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 50%;
+    top: 0;
+    right: -10px;
+    background-color: #ff8f9c;
+}
+
+@media (max-width:1200px) {
+    .header .container{
+        max-width: 980px;;
+    }
+}
+@media (max-width:1024px) {
+    .header .container{
+        max-width: 850px;;
+    }
+}
+@media (max-width:768px) {
+    .navbar {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease;
+    }
+
+    .navbar.show {
+        top: 100px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .actions .action:first-child {
+        display: block;
+    }
+
+    .navbar .navbar-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fff;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+}
+@media (max-width:575px) {
+    .actions .toggle-search{
+        display: block;
+    }
+    .search{
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 250px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease;
+    }
+    .search.show{
+        top: 90px;
+        opacity: 1;
+        visibility: visible;
+    }
+}

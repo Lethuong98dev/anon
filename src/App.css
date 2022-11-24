@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background: none;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+img,
+ion-icon,
+button,
+a {
+    display: block;
+}
+
+span {
+    display: inline-block;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+}
+
+input {
+    display: block;
+    width: 100%;
+    font: inherit;
+}
+
+input::-webkit-input-placeholder {
+    font: inherit;
+}
+
+input::-moz-placeholder {
+    font: inherit;
+}
+
+input:-ms-input-placeholder {
+    font: inherit;
+}
+
+input::-ms-input-placeholder {
+    font: inherit;
+}
+
+input::placeholder {
+    font: inherit;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    color: #454545;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid var(--cultured);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border: 3px solid var(--white);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
